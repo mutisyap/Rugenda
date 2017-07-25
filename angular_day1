@@ -1,0 +1,9 @@
+Component Definition Object (CDO for short).
+
+The expressions in curly braces ({{phone.name}} and {{phone.snippet}}) denote bindings, 
+which are referring to our application model,
+
+(since components are also directives) the name of the component is in camelCase (e.g. 
+myAwesomeComponent), but we will use kebab-case (e.g. my-awesome-component) when referring to it in our HTML.
+
+ it is considered a good practice to avoid using the scope directly.

@@ -1,0 +1,21 @@
+DJANGO VIEWS
+Take an http request, return http response
+It should take a request object as the first argument
+
+e.g 
+from django.http import HttpResponse
+def hello_world(request):
+    return HttpResponse("Hello, World")
+
+Class based views:
+subclasses View and implements methods for the HTTP methods it supports. 
+
+
+from django.http import HttpResponse
+from django.views.generic import View
+
+class MyView(View):
+
+    def get(self, request, *args, **kwargs):
+        return HttpResponse("Hello, World")
+        

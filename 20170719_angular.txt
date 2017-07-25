@@ -1,0 +1,129 @@
+https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
+
+One component per file.
+- Easy unit testing and mocking
+- Easy reading, mantainability, and avoid collisions with teams in vcs.
+- Avoids hidden bugs in combining components.
+
+Avoid:
+/* avoid */
+angular
+    .module('app', ['ngRoute'])
+    .controller('SomeController', SomeController)
+    .factory('someFactory', someFactory);
+
+function SomeController() { }
+
+function someFactory() { }
+
+USE:
+/* recommended */
+
+// app.module.js
+angular
+    .module('app', ['ngRoute']);
+
+/* recommended */
+
+// some.controller.js
+angular
+    .module('app')
+    .controller('SomeController', SomeController);
+
+function SomeController() { }
+
+/* recommended */
+
+// some.factory.js
+angular
+    .module('app')
+    .factory('someFactory', someFactory);
+
+function someFactory() { }
+
+Small Functions
+
+Define small functions, no more than 75 LOC (less is better).
+For reuse, read, maniain, no hidden bugs
+
+Immediately Invoked Function Expression (IIFE)
+Wrap components in an IIFE
+(Removes variables from the global scope) --> Avoids variable collisions.
+
+Avoid naming collisions
+
+ Separators help define modules and their submodule hierarchy. For example app may be your root 
+ module while app.dashboard and app.users may be modules that are used as dependencies of app.
+
+Declare modules without a variable using the setter syntax.
+
+/* avoid */
+var app = angular.module('app', [
+    'ngAnimate',
+    'ngRoute',
+    'app.shared',
+    'app.dashboard'
+]);
+
+Instead use the simple setter syntax.
+
+/* recommended */
+angular
+    .module('app', [
+        'ngAnimate',
+        'ngRoute',
+        'app.shared',
+        'app.dashboard'
+    ]);
+
+
+GETTERS:
+
+/* avoid */
+var app = angular.module('app');
+app.controller('SomeController', SomeController);
+
+function SomeController() { }
+
+/* recommended */
+angular
+    .module('app')
+    .controller('SomeController', SomeController);
+
+function SomeController() { }
+
+Only set once and get for all other instances.
+Reason:  A module should only be created once, then retrieved from that point and after.
+
+/* recommended */
+
+// to set a module
+angular.module('app', []);
+
+// to get a module
+angular.module('app');
+
+Use named functions instead of passing an anonymous function in as a callback.
+
+
+
+
+
+Use the controllerAs syntax over the classic controller with $scope syntax.
+This helps avoid using $parent calls in Views with nested controllers.
+
+<!-- recommended -->
+<div ng-controller="CustomerController as customer">
+    {{ customer.name }}
+</div>
+
+The controllerAs syntax uses this inside controllers which gets bound to $scope
+
+/* recommended - but see next section */
+function CustomerController() {
+    var vm = this;
+    vm.name = {};
+    vm.sendMessage = function() { };
+}
+
+

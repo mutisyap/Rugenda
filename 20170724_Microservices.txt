@@ -1,0 +1,58 @@
+Best suited when one wants support for a range of platforms and devices. 
+
+Essentially, microservice architecture is a method of developing software applications as a suite of independently 
+deployable, small, modular services in which each service runs a unique process and communicates through a well-defined, 
+lightweight mechanism to serve a business goal.
+
+Communication is thorugh HTTP/REST with JSON or Protobuf. 
+
+REST (Representational State Transfer) is a useful integration method because of its comparatively lower complexity 
+over other protocols.
+
+By making use of a stateless protocol and standard operations, REST systems aim for fast performance, reliability, and 
+the ability to grow, by re-using components that can be managed and updated without affecting the system as a whole, 
+even while it is running.
+
+Monolithic applications:
+A monolithic application is a single autonomous unit:
+Challenge:
+    - All the change cycles usually end up being tied to one another. A modification on one section will require building 
+    and deploying a new version. 
+    - If one needs to scale specific functions of an application, in monotlithic, one is required to scale the entire 
+    application instead of just the desired components.
+
+
+Service Oriented architecture (SOA)
+Microservices uses faster messaging mechanism. 
+SOA focusses on imperative programming (Change program state.) Opposite of declarative programming which focusses on what
+the program should do rather than what it should accomplish. 
+Basically, SOA is broader and can define multiple things.
+
+Microservices architecture focuses on a responsive-actor programming style.
+
+Microservices frequently use NoSQL or micro-SQL databases (which can be connected to conventional databases).
+
+But the real difference has to do with the architecture methods used to arrive at an integrated set of services 
+in the first place. 
+
+
+The Micro service Architecture:
+Characteristics:
+    - Multiple component services. (Each component can be deployed, tweaked and redeployed independently without 
+    compromising the entire app's integrity.)
+    the challenges to this model is that:
+            - Expensive RPC (remote procedure calls instead of in-process calls.)
+            - Coarser grained remote APIs
+            - Increased complexity of redistributing responsibilities between components. 
+    - It is organized around business capabilities and priorities. It thus utilizes cross-functional teams.
+    The function of each team is to make a specific productbased on services communicating via the message bus. 
+    A team thus owns the product in its lifetime: "You build it, you run it." Amazon's oft-quoted maxim
+    - Just like the classical UNIX systems: They receive requests, process them, and generate responses. 
+    {Smart end-points that process info and apply logicand dumb ppes through which info flows.}
+    - Decentralized governance is favorable. developers strive to produce tools that can be used by others 
+    to solve the same problem. Typically, in a microservice application, each service manages its unique database. 
+    - Designed to cope with failure. One failing doesn't mean others stop. Designed to accomodate service interruptions.  
+    - It is an evolutionary design, best for evolutionary systems. 
+    
+
+Service Objects

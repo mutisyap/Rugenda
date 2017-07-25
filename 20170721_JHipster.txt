@@ -1,0 +1,97 @@
+Generator:
+Generate stuff:
+Code generators:
+    Generate the code. 
+
+    They set up the project according to best practices.
+
+
+Yeoman: Creates generators which create together best practices.
+
+Conventions rather than configurations.
+
+
+Developer productivity
+    Fast delivery:
+Production Ready Software:
+    Huge number of users.
+
+A great developer tooling for maximum productivity.
+
+
+Client Side:
+Yeoman, Webpack, Angular, Bootstrap
+Webpack: minifier, uglifier, optimizer, compiler for efficient production build
+Boostrap: starter pack (Twitter bootstrap)
+Browser: Synchronizes several browsers.
+Karma: Unit test
+Angular: Data binding, form validation, internationalization
+
+yarn: JS dependency manager, comes with node
+Replacement for npm
+
+
+OSS (Operations Support System) Helps operations team work efficiently
+BSS (Business Support System) End to end systems 
+
+Yeoman: Avoid repetitive task
+
+Server Side:
+Maven|Gradle 
+Spring boot: 
+IoC: Inversion of Control (dependency Injection)
+    @Autowired: (Instantiation) Wiring of the objects. 
+    Spring used to do that with xml
+
+AOP:
+    
+
+Restful:
+JSON to ClassName object
+
+
+
+OSS: Netflix:
+    Microservices
+        Eureka: Load balancing and fallover
+        Zool: Proxy for dynamic routing, monitoring and security
+        Ribbon: Software load balancing for services
+
+
+Liquibase: DB schema: Databases and ORM
+
+JPA: Standard ORM solutions for JAVA.
+    Uses hibernate. 
+
+Spring data JPA: Generates JPA repositories automatically.
+Removes boilerplate code.
+
+Caching: King for perfomance
+    Override in app.properties
+
+Security: Bulletproof security framework
+
+    Oauth or jwt
+
+
+REST: Highperformance rest. 
+
+
+Thymeleaf: Single web isn't enough
+Replaces JSPs and ISTLs
+
+Monitoring: Monitor JVM, 
+
+Cloud deployment: 
+
+JHIPSTER make everything work together, out of the box.
+
+
+Others:
+Entity Subgenerator
+Import JDL: Create entities in JDL studio. Export file and it creates the entities for you
+
+
+Spring profiles: Different for dev and test
+
+Sub-generators for direct deployment to CloudFoundry, Heroku and AWS.

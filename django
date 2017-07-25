@@ -1,0 +1,30 @@
+$ python manage.py sqlmigrate polls 0001
+You should see something similar to the following (we’ve reformatted it for readability):
+
+
+ python manage.py check; 
+
+ this checks for any problems in your project without making migrations or touching the database
+
+Steps after adding models:
+Change your models (in models.py).
+Run python manage.py makemigrations to create migrations for those changes
+Run python manage.py migrate to apply those changes to the database
+
+https://docs.djangoproject.com/en/1.11/intro/tutorial02/
+For the shell
+
+DJANGO ADMIN
+$ python manage.py createsuperuser
+
+Views
+
+Ignored:
+https://docs.djangoproject.com/en/1.11/intro/tutorial03/
+
+Regex Recap 
+^ for the beginning of the text
+$ for the end of the text
+\d for a digit
++ to indicate that the previous item should be repeated at least once
+() to capture part of the pattern

@@ -1,0 +1,33 @@
+Annotation:
+a tag that represents the metadata i.e. attached with class, interface, methods or fields to 
+indicate some additional information which can be used by java compiler and JVM.
+
+An alternative option for XML and java marker interfaces.
+
+@Override:
+That method must be overriden. Else, we get a compiler error
+
+@SuppressWarnings
+Equivalent to set error to 0 in PHP. Ignores compiler errors.
+
+@Deprecated
+TO indicate that such mat be removed in futire versions.
+This warns the user that it is better not to use such methods.
+
+
+Others:
+@Target
+@Retention
+@Inherited
+@Documented
+
+
+Custom Annotations (User-defined annotations)
+ The @interface element is used to declare an annotation. For example:
+
+@interface MyAnnotation{}  
+
+
+In Spring
+@RestController
+
